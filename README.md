@@ -102,5 +102,5 @@ Our research code is released under Apache License 2.0. See [LICENSE](LICENSE) f
 ### Acknowledgments
 Our implementation and experiments are built on top of open-source GitHub repositories. We thank all the authors who made their code public, which tremendously accelerates our project progress. If you find these works helpful, please consider citing them as well.
 
-[huggingface/transformers](huggingface/transformers)
+[huggingface/transformers](huggingface/transformers) </br>
 [crux82/ganbert](https://github.com/crux82/ganbert)
