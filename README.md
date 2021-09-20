@@ -4,7 +4,12 @@
 Code repository for the paper: <br/>
 <b>GAN-RoBERTa: a Robust Semi-Supervised Model for Detecting Anti-Asian COVID-19 Hate Speech on Social Media</b>
 
-GAN-RoBERTa is an effective semi-supervised generative adversarial network based methodology for COVID-19 related hate speech detection. GAN-RoBERTa utilizes the RoBERTa encoder as a feature extractor to generate latent embedding from labelled([EA dataset](https://zenodo.org/record/3816667#.YUhhjrgzaUk)) and unlabelled data([CLAWS dataset](http://claws.cc.gatech.edu/covid/#dataset)) in the training process. Our experiment results indicate that with the collaborative training with GAN and RoBERTa and specific participation of unlabelled data in the optimization process, the model's Macro-F1 score is significantly boosted from 0.77 to 0.82.
+ In this repository, we provide our research code for training and testing our proposed method for the hate speech detection classification task.
+
+
+GAN-RoBERTa is an effective semi-supervised generative adversarial network based methodology for COVID-19 related hate speech detection. GAN-RoBERTa utilizes the RoBERTa encoder as a feature extractor to generate latent embedding from labelled([EA dataset](https://zenodo.org/record/3816667#.YUhhjrgzaUk)) and unlabelled data([CLAWS dataset](http://claws.cc.gatech.edu/covid/#dataset)) in the training process. Our experiment results indicate that with the collaborative training with GAN and RoBERTa and specific participation of unlabelled data in the optimization process, the model's Macro-F1 score is significantly boosted from 0.77 to 0.82.</br>
+
+
 <p align="center">
   <img src="Figure/GAN_Roberta.png" width=700 align="center">
 </p>
