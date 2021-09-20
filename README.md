@@ -5,4 +5,7 @@
 Code repository for the paper: <br />
 GAN-RoBERTa: a Robust Semi-Supervised Model for Detecting Anti-Asian COVID-19 Hate Speech on Social Media
 
+<p align="center">
+  <img src="Figure/GAN_Roberta.png" width=700 align="center">
+</p>
 
