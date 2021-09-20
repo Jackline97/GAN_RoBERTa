@@ -95,4 +95,6 @@ optional arguments:
                
 ```
 
+### LICENSE
 
+Our research code is released under Apache License 2.0. See [LICENSE](LICENSE) for details.
