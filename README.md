@@ -41,6 +41,58 @@ Basically all dependent packages of this project are up-to-date, so it will be e
 conda create --name GAN_RoBERTa python=3.9
 conda activate GAN_RoBERTa
 conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
+
 # install the remaining package with pip
+
 pip install -r requirements.txt
 ```
+### Fetch data
+Our unlabelled data from [CLAWS dataset](http://claws.cc.gatech.edu/covid/#dataset) are tweet ID, you need to apply a [twitter developer platform account](https://developer.twitter.com/en/docs/twitter-api) to access the tweets. The detailed information and data sturcture about CLAWS dataset are shown in this [file](http://claws.cc.gatech.edu/img/covid/data/README.md).
+
+### Run the experiment
+
+After fetching all data and install requirement packages, you can directly run the following command to train the model to reporduce our experiment.
+```
+pyhthon main.py --run_mode train --batch_size 8 --epoch 6 --Extra_linear_layer_number 2 --model_type roberta-large
+```
+Or you can run test mode to test on the dataset.
+```
+pyhthon main.py --run_mode test
+```
+
+Note: All support parameters are shown in the below cell.
+
+```
+usage: main.py [-h] [--unlabelled_data UNLABELLED_DATA] [--labelled_data LABELLED_DATA] [--semi_mode SEMI_MODE] [--MAX_SEQ_LEN MAX_SEQ_LEN] [--batch_size BATCH_SIZE] [--Extra_linear_layer_number EXTRA_LINEAR_LAYER_NUMBER]
+               [--drop_out_rate DROP_OUT_RATE] [--word_embedding_size WORD_EMBEDDING_SIZE] [--hidden_state_size HIDDEN_STATE_SIZE] [--lr LR] [--epoch EPOCH] [--model MODEL] [--run_mode RUN_MODE] [--model_type MODEL_TYPE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --unlabelled_data UNLABELLED_DATA
+                        Path to unlabelled dataset
+  --labelled_data LABELLED_DATA
+                        Path to labelled dataset
+  --semi_mode SEMI_MODE
+                        Whether to use semi_supervised learning
+  --MAX_SEQ_LEN MAX_SEQ_LEN
+                        Max sentence length
+  --batch_size BATCH_SIZE
+                        Batch size
+  --Extra_linear_layer_number EXTRA_LINEAR_LAYER_NUMBER
+                        Extra linear layer number
+  --drop_out_rate DROP_OUT_RATE
+                        drop out rate
+  --word_embedding_size WORD_EMBEDDING_SIZE
+                        word embedding size
+  --hidden_state_size HIDDEN_STATE_SIZE
+                        Hidden state size
+  --lr LR               learning rate
+  --epoch EPOCH         epoch number
+  --model MODEL         model folder path
+  --run_mode RUN_MODE   run mode
+  --model_type MODEL_TYPE
+                        RoBERTa model size: (roberta-large, roberta-base)
+               
+```
+
+
