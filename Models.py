@@ -52,7 +52,10 @@ class ROBERTA_base_part(torch.nn.Module):
         self.d1 = torch.nn.Dropout(dropout_rate)
         self.model_type = model_type
         # This part need to change
-        self.l1 = torch.nn.Linear(768, 64)
+        if model_type = 'roberta-large':
+            self.l1 = torch.nn.Linear(1024, 64)
+        else:
+            self.l1 = torch.nn.Linear(768, 64)
         for i in range(num_layers):
             self.layers.append(torch.nn.LayerNorm(64))
             self.layers.append(torch.nn.Dropout(dropout_rate))
